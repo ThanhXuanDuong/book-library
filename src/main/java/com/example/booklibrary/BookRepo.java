@@ -42,7 +42,7 @@ public class BookRepo {
     }
 
     public List<Book> deleteBook(String ISBN) {
-        books.removeIf(book ->(Objects.equals(book.getISBN(), ISBN)));
+        books.removeIf(book ->(book.getISBN().equals(ISBN)));
         return books;
     }
 }
